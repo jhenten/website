@@ -1,0 +1,12 @@
+//git 到 github 指令
+
+// git clone #網址
+// git add .
+// git commit -m "uploading code"
+// git push
+
+//////////////////////////
+
+//查看檔案追蹤情況
+// git status
+//紅色代表還沒被追蹤
