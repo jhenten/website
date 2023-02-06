@@ -11,14 +11,39 @@
 
   <!--ref https://www.free-css.com/free-css-templates/page281/limelight -->
   <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
     <header class="header">
       
-      <h1>WaWalon</h1>
+      <!-- <h1>WaWalon</h1>
       <div class="link">
+      
         <a href="#about">Aboutddd</a>
         <a href="#photos">Photos</a>
         <a href="#contact">Contact</a>
-      </div>
+      </div> -->
+
+      <nav class="navbar">
+        <!-- logo -->
+        <a href="#about" class="nav-branding">Wawalon</a>
+
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="#" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="#photos" class="nav-link">Photo</a>
+            </li>
+            <li class="nav-item">
+                <a href="#contact" class="nav-link">Contact</a>
+            </li>
+        </ul>
+        <div class="hamberger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>        
+    </nav>
+    <script src="./demo.js"></script>
     </header>
     <div class="container">
       <div class="blank">
@@ -68,5 +93,7 @@
         <p> © 2023 All Rights Reserved. By Gaoten</p>
       </div>
     </footer>
+
+
   </body>
 </html>

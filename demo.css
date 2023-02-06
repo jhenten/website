@@ -11,26 +11,69 @@ body {
 }
 
 /*頂端要設定hover  id*/
-.header {
+header {
     width: 100%;
-    text-align: center;
-    text-transform: uppercase;
-    padding: 10px 32px;
+
     /*background-color: #0a0a23; */
     color: rgb(0, 0, 0);
     border-bottom: 2px solid #000000;
   }
-.link a{
-    display: inline-block;
-    width: 100px;
-    text-align: center;
-    line-height: 40px;
-    font-size: 16px;
-    padding:10px auto;
-    text-decoration: none;
-    color:rgb(0, 0, 0);
-    border-radius: 5px;
+
+li {
+    list-style: none;
 }
+
+a {
+    color: black;
+    text-decoration: none;
+}
+.navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.nav-branding {
+    padding-left: 50px;
+    display: block;
+    font-size: 2rem ;
+}
+
+.nav-menu {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px ;
+}
+
+.nav-link {
+    transition: 0.3s ease-in;
+}
+
+.nav-link:hover {
+    color: rgb(255, 0, 200);
+}
+
+.hamberger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    /* for mobile */
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(0, 0, 0);
+}
+
+
 .link a:hover {
     
     color:rgb(13, 255, 0);
@@ -154,6 +197,27 @@ body {
     padding-bottom: 20px;
 }
 
+/* 回到最上面 */
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 99;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    background-color: rgb(145, 145, 145);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+  }
+  
+  #myBtn:hover {
+    background-color: #555;
+  }
+
 
 
 @media all and (min-width: 480px) and (max-width: 768px) {
@@ -167,3 +231,58 @@ body {
         padding:20px 30px;
     }
 }
+
+@media (max-width:768px){
+    .nav-link{
+        color: #fff;
+    }
+    .nav-branding {
+        margin: 0 auto;
+        padding: 0px;
+        display: block;
+        padding-left:30px ;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .hamberger{
+        display: block;
+    
+    }
+    .hamberger.active .bar:nth-child(2){
+        opacity: 0 ;
+    }
+    .hamberger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamberger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;  /* 避免選取時畫面跑掉 */
+        left: -100%;
+        top: -20px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #262626;
+        color: #fff;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+    .nav-item{
+        margin: 25px 0;
+        padding: px auto;
+        color: #fff;
+    }
+    .nav-menu.active {
+        left: 0;
+    }
+    .hamberger{
+        transition: 0.3s ease-in;
+    }
+    .hamberger.active .bar{
+        background-color: #fff;
+    }
+
+} 
